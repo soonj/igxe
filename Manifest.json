@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "IGXE",
+    "version": "0.1",
+    "description": "A Extension for IGXE",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.png",
+            "38": "images/icon.png"
+        },
+        "default_title": "IGXE_Helper",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["bkg.js"],
+        "persistent":true
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.www.igxe.cn/*"],
+            "js": ["jq.js","igxe_script.js"]
+        }
+    ],
+    "permissions": [
+        "webRequest",
+        "tabs",
+        "storage",
+        "*://*.www.google.com/*"
+    ],
+    "web_accessible_resources": [
+        "images/*.png"
+    ]
+}
