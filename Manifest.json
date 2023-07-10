@@ -3,7 +3,7 @@
     "name": "IGXE",
     "version": "0.1",
     "description": "A Extension for IGXE",
-    "icons": {
+    "icons": { 
         "16": "images/icon.png",
         "48": "images/icon.png",
         "128": "images/icon.png"
